@@ -1,0 +1,53 @@
+{
+    "name": "anilist-wrapper",
+    "version": "1.0.0",
+    "description": "A comprehensive TypeScript-based AniList API wrapper utilizing GraphQL",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": ["dist", "LICENSE", "README.md"],
+    "scripts": {
+        "build": "tsc",
+        "clean": "rimraf dist",
+        "lint": "eslint src --ext .ts",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage",
+        "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run build"
+    },
+    "keywords": [
+        "anilist",
+        "anime",
+        "manga",
+        "api",
+        "wrapper",
+        "graphql",
+        "typescript"
+    ],
+    "author": "Firr, The Creator.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/firrthecreator/anilist-wrapper.git"
+    },
+    "bugs": {
+        "url": "https://github.com/firrthecreator/anilist-wrapper/issues"
+    },
+    "homepage": "https://github.com/firrthecreator/anilist-wrapper#readme",
+    "dependencies": {
+        "graphql": "^16.8.1",
+        "graphql-request": "^6.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.5",
+        "@typescript-eslint/eslint-plugin": "^6.15.0",
+        "@typescript-eslint/parser": "^6.15.0",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3",
+        "vitest": "^1.0.4",
+        "rimraf": "^5.0.1"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}
